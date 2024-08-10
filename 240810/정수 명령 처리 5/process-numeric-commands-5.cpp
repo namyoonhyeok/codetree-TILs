@@ -22,7 +22,7 @@ int main() {
 
     cout<<v[0]<<endl;
 
-    cout<<v.size()<<endl;
+    cout<<v.size();
 
     return 0;
 }
