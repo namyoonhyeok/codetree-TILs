@@ -7,22 +7,35 @@ int main() {
     int n;
     cin>>n;
 
+    string order;
+    int index, item;
+
     vector<int> v;
 
-    v.push_back(10);
-    v.push_back(20);
+    for(int i=0;i<n;i++)
+    {
+        cin>>order;
 
-    cout<<v[0]<<endl;
-    cout<<v[1]<<endl;
-    cout<<v.size()<<endl;
-    
-    v.pop_back();
-    
-    cout<<v.size()<<endl;
+        if(order=="push_back")
+        {
+            cin>>item;
+            v.push_back(item);
+        }
+        else if(order=="get")
+        {
+            cin>>index;
+            cout<<v[index-1]<<endl;
+        }
 
-    cout<<v[0]<<endl;
-
-    cout<<v.size();
+        else if(order=="size")
+        {
+            cout<<v.size()<<endl;
+        }
+        else
+        {
+            v.pop_back();
+        }
+    }
 
     return 0;
 }
